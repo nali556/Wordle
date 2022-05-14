@@ -1,4 +1,5 @@
 import React from "react";
+import Key from "./Key";
 
 export default function Keyboard() {
   //Map through the array in order to display each letter on keyboard
@@ -10,11 +11,19 @@ export default function Keyboard() {
     <div className="keyboard">
       <div className="line1">
         {keys1.map((key) => {
-          return <div>{key}</div>;
+          return <Key keyValue={key} />;
         })}
       </div>
-      <div className="line2"></div>
-      <div className="line3"></div>
+      <div className="line2">
+        {keys2.map((key) => {
+          return <Key keyValue={key} />;
+        })}
+      </div>
+      <div className="line3">
+        {keys3.map((key) => {
+          return <Key keyValue={key} />;
+        })}
+      </div>
     </div>
   );
 }
