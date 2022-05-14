@@ -39,7 +39,6 @@ nav h1 {
 .board {
   width: 500px;
   height: 550px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
@@ -55,7 +54,7 @@ nav h1 {
   flex: 33%;
   height: 100%;
   border: 1px solid grey;
-  margin: 5px;
+  margin: 10px;
   display: grid;
   place-items: center;
   font-size: 30px;
@@ -120,7 +119,7 @@ nav h1 {
 }
 
 #big {
-  width: 100px;
+  width: 80px;
 }
 #disabled {
   background-color: #3a393c;
