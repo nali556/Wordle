@@ -2,14 +2,14 @@ import React, { useContext } from "react";
 import { AppContext } from "../App.js";
 
 export default function Key({ keyValue, bigKey }) {
-  const {onSelectLetter, onDelete, onEnter} = useContext(AppContext);
+  const { onSelectLetter, onDelete, onEnter } = useContext(AppContext);
   const selectLetter = () => {
     if (keyValue === "ENTER") {
-      onEnter()
+      onEnter();
     } else if (keyValue === "DELETE") {
-        onDelete()
+      onDelete();
     } else {
-        onSelectLetter(keyValue)
+      onSelectLetter(keyValue);
     }
   };
   return (
