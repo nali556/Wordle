@@ -18,17 +18,17 @@ const {onEnter, onDelete, onSelectLetter} = useContext(AppContext);
       onDelete()
     }else{
      keys1.forEach((key)=> {
-       if (event.key === key){
+       if (event.key.toUpperCase() === key){
          onSelectLetter(key)
        }
      })
      keys2.forEach((key)=> {
-      if (event.key === key){
+      if (event.key.toUpperCase() === key){
         onSelectLetter(key)
       }
     })
     keys3.forEach((key)=> {
-      if (event.key === key){
+      if (event.key.toUpperCase() === key){
         onSelectLetter(key)
       }
     })
