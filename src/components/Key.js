@@ -1,12 +1,20 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../App.js";
 
 export default function Key({ keyValue, bigKey }) {
-    const { board, setBoard } = useContext(AppContext);
-    const selectLetter = () => {
-        const newBoard = [...board]
-        newBoard[0][0] = keyValue
-        setBoard(newBoard)
+  const {onSelectLetter, onDelete, onEnter} = useContext(AppContext);
+  const selectLetter = () => {
+    if (keyValue === "ENTER") {
+      onEnter()
+    } else if (keyValue === "DELETE") {
+        onDelete()
+    } else {
+        onSelectLetter(keyValue)
     }
-  return <div className="key" id={bigKey && "big"} onClick={selectLetter}>{keyValue}</div>;
+  };
+  return (
+    <div className="key" id={bigKey && "big"} onClick={selectLetter}>
+      {keyValue}
+    </div>
+  );
 }
